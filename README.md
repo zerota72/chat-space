@@ -7,11 +7,9 @@
 |username|string|null: false, unique: true|
 |email|string|null: false, unique: true|
 |password|string|null: false|
-|password confirmation|string|null: false|
 
 ### Association
 
-- has_many :users_groups 
 - has_many :groups, through: :users_groups
 - belongs_to :message
 
@@ -23,7 +21,6 @@
 
 ### Association
 
-- has_many :users_groups
 - has_many :users, though: :users_groups
 - belongs_to :message
 
