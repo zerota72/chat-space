@@ -29,7 +29,7 @@ Things you may want to cover:
 
 ｜Coulumn|Type|Options|
 |--------|----|-------|
-|username|string|null: false, unique: true|
+|name|string|null: false, unique: true|
 |email|string|null: false, unique: true|
 |password|string|null: false|
 |password confirmation|string|null: false|
@@ -44,7 +44,7 @@ Things you may want to cover:
 
 ｜Coulumn|Type|Options|
 |--------|----|-------|
-|group_name|string|null: false, unique: true|
+|name|string|null: false, unique: true|
 
 ### Association
 
@@ -70,7 +70,7 @@ Things you may want to cover:
 |--------|----|-------|
 |user_id|integer|null: false, foreign_key: true|
 |group_id|integer|null: false, foreign_key: true|
-|body|text|null: false|
+|body|text|
 |image|string|
 
 ### Association
