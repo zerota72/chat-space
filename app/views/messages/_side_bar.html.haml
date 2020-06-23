@@ -3,17 +3,19 @@
     = current_user.name
     .top-name
       %p.top-usertop
-        masa
     .top-icon
       .top-icon_edit
-        = icon('far', 'far fa-edit')
+        = link_to new_group_path do
+          = icon('far', 'far fa-edit')
       .top-icon_setting
         = link_to edit_user_path(current_user) do
           = icon('fa', 'fa fa-cog')
 
   .side-bar__grouplist
-    .side-bar__grouplist__group
-      %p.side-bar__grouplist__group__group-name
-        aaaaaa
-      %p.side-bar__grouplist__group__latest-message
-        さんぷる
+    -current_user.groups.each do |group|
+      .side-bar__grouplist__group
+        = link_to '#' do
+          .side-bar__grouplist__group__group-name
+            = group.name
+          .side-bar__grouplist__group__latest-message
+            さんぷる
