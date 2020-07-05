@@ -67,7 +67,7 @@ html {
 
 .main-chat {
   width: calc(100% - 300px);
-  float: left;
+  float: right;
   
 
 
@@ -137,36 +137,25 @@ html {
     }
   }
 
-  .form{
+.form{
+    background-color: #DDDDDD;
+    box-sizing: border-box;
     height: 90px;
-    padding: 20px 40px;
-    background-color: #ddd;
-    display: flex;
+    padding: 20px 50px 20px 40px;
 }
 
 .input-box{
-  position: relative;
-    width: 100%;
-    &__text{
-      height: 50px;
-    width: 100%;
-    padding: 0 40px 0 10px;
-    color: #434a54;
-    border-style: none;
-    }
+  background-color: #fff;
+    float: left;
+    height: 50px;
+    padding-right: 10px;
     &__image{
-      font-size: 1.3rem;
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    cursor: pointer;
-    &__file{
-      display: none;
-
+      font-size: 20px;
+      line-height: 50px;
     }
-    }
+   
 }
-
+  
 .submit-btn{
   width: 100px;
     height: 50px;
@@ -177,3 +166,15 @@ html {
     cursor: pointer;
 }
   
+.message-text{
+  border: none;
+  box-sizing: border-box;
+  float: left;
+  height: 50px;
+  padding: 0 10px;
+  width: calc(100% - 150px);
+}
+
+.hidden{
+  display: none;
+}
