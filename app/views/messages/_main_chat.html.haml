@@ -13,12 +13,8 @@
         Edit
         
   .group-messages
-    .message
+    .messages
       = render @messages
-      .message__upper
-        .message__upper__user
-        .message__upper__date
-      .message__text
   
   .form
     = form_for [@group, @message] do |f|
