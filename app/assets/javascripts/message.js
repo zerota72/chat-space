@@ -62,8 +62,11 @@ $('#new_message').on('submit', function(e){
   })
   .fail(function() {
     alert("メッセージ送信に失敗しました");
+   
   })
+  return false;
 });
+
 
 var reloadMessages = function() {
   var last_message_id = $('.message:last').data("message-id");
@@ -80,12 +83,16 @@ var reloadMessages = function() {
         insertHTML += buildHTML(message)
       });
         $('.messages').append(insertHTML);
-        $('.messages').animate({ scrollTop: $('.messages')[0].scrollHeight});
+        $('.messages').animate({ scrollTop: $('.messages')[0].scrollHeight},);
+
+        
       }
     })
     .fail(function() {
       alert("メッセージ送信に失敗しました");
+      
     });
+   
   };
 
   if (document.location.href.match(/\/groups\/\d+\/messages/)) {
